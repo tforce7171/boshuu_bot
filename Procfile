@@ -1,1 +1,1 @@
-discordbot: ruby bot_test.rb
+discordbot: ruby boshuu_bot.rb
