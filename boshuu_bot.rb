@@ -13,7 +13,9 @@ assign_time_hour = 16
 assign_time_min = 0o0
 exec_count = 0
 application_id = ENV['APPLICATION_ID']
-channel_id_boshuu = '764701181783572500'
+# channel_id_boshuu = '764701181783572500'
+channel_id_boshuu = "549143999814959124"#テスト
+
 
 bot.heartbeat do |_event|
   now_hour = Time.now.hour
