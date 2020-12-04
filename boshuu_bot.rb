@@ -13,8 +13,7 @@ assign_time_hour = 16
 assign_time_min = 0o0
 exec_count = 0
 application_id = ENV['APPLICATION_ID']
-# channel_id_boshuu = '764701181783572500'
-channel_id_boshuu = "549143999814959124"#テスト
+channel_id_boshuu = '764701181783572500'
 
 
 bot.heartbeat do |_event|
@@ -57,11 +56,6 @@ bot.heartbeat do |_event|
   end
 
   exec_count = 0 if assign_time_hour < now_hour && exec_count == 1
-end
-
-bot.command :setup do |event|
-  server_id = event.server.id
-  bot.send_message(channel_id_boshuu, "#{server_id}")
 end
 
 bot.run
