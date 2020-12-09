@@ -54,8 +54,9 @@ bot.heartbeat do |_event|
     exec_count = 1
 
   end
-
-  exec_count = 0 if assign_time_hour < now_hour && exec_count == 1
+  if assign_time_hour < now_hour && exec_count == 1
+    exec_count = 0
+  end
 end
 
 bot.run
