@@ -105,7 +105,6 @@ bot.heartbeat do |_event|
   rows = conn.exec("
     select *
     from server_info
-    where server_id = #{server_id}
     ")
 
   rows.each do |server_info|
