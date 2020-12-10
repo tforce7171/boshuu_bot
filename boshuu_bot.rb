@@ -10,8 +10,6 @@ bot = Discordrb::Commands::CommandBot.new(
   client_id: ENV['CLIENT_ID'],
   prefix: '/'
 )
-assign_time_hour = 16
-assign_time_min = 0o0
 exec_count = 0
 application_id = ENV['APPLICATION_ID']
 
@@ -150,7 +148,7 @@ bot.heartbeat do |_event|
       exec_count = 1
     end
 
-    if assign_time_hour < now_hour && exec_count == 1
+    if boshuu_time_hour < now_hour && exec_count == 1
       exec_count = 0
     end
   end
