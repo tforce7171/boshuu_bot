@@ -14,11 +14,8 @@ assign_time_hour = 16
 assign_time_min = 0o0
 exec_count = 0
 application_id = ENV['APPLICATION_ID']
-# channel_id_boshuu = '764701181783572500'
-channel_id_boshuu = "549143999814959124"#テスト
 
-# uri = URI.parse(ENV['DATABASE_URL'])
-uri = URI.parse('postgres://diicnrflmhopgx:dd5ea1e5d5846f0af031900f5b74aecac79d00627a6c5d2b2f4157e4ec8132ae@ec2-54-205-248-255.compute-1.amazonaws.com:5432/ddo0jjq166l8cv')
+uri = URI.parse(ENV['DATABASE_URL'])
 conn = PG.connect(
   host: uri.hostname,
   dbname: uri.path[1..-1],
