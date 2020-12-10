@@ -148,7 +148,7 @@ bot.heartbeat do |_event|
       exec_count = 1
     end
 
-    if boshuu_time_hour < now_hour && exec_count == 1
+    if boshuu_time_hour.to_i < now_hour.to_i && exec_count == 1
       exec_count = 0
     end
   end
